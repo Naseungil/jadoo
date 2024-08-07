@@ -110,7 +110,40 @@ header{
 .top_nav .dropdown ul li:hover{
   color:#5E6282
 }
-
+header .content{
+  display: flex;
+  justify-content: space-between;
+}
+header .content .desc{
+  width: 545px;
+}
+header .content .desc h3{
+  color:#DF6951;
+  font-size: 20px;
+  line-height: 30px;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+header .content .desc h2{
+  font-family: "Volkhov", serif;
+  color:#181E4B;
+  font-weight: 700px;
+  font-size: 84px;
+  line-height: 89px;
+  letter-spacing: -3.36px;
+  margin-bottom:30px;
+}
+header .content .desc p{
+  color:var(--txt-color);
+  font-size: var(--fz);
+  line-height: 30px;
+  font-family: "Poppins", sans-serif;
+  font-size: 500;
+  width: 477px;
+  margin-bottom:34px
+}
 
 /* 폰트 */
 body{
@@ -118,5 +151,6 @@ body{
   line-height: var(--lh);
   font-family: "Poppins", sans-serif;*/
   font:var(--fz)/var(--lh)/"Poppins", sans-serif;
+  color:var(--txt-color);
 }
 /* 링크 번트 */
