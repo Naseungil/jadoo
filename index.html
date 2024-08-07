@@ -6,32 +6,35 @@
     <title>jadoo</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 <header>
-  <div class="top_nav container">
-    <h1 class="logo"><a href="">Jadoo</a></h1>
-    <nav>
-      <ul>
-        <li><a href="">Desitnations</a></li>
-        <li><a href=""></a>Hotels</li>
-        <li><a href=""></a>Flights</li>
-        <li><a href=""></a>Bookings</li>
-      </ul>
-      <ul>
-        <li><a href="">Login</a></li> 
-        <li><a href="">Sign up</a></li> 
-      </ul>
-      <div class="dropdown">
-        <button>EN <i class="fa-solid fa-chevron-down"></i></button>
-        <ul>
-          <li>KOR</li>
-          <li>ENG</li>
-          <li>JPA</li>
+  <div class="top_nav fixed">
+    <div class="container">
+      <h1 class="logo"><a href="">Jadoo</a></h1>
+      <nav>
+        <ul class="main_menu">
+          <li><a href="">Desitnations</a></li>
+          <li><a href=""></a>Hotels</li>
+          <li><a href=""></a>Flights</li>
+          <li><a href=""></a>Bookings</li>
         </ul>
-      </div>
-    </nav>
+        <ul class="login_links">
+          <li><a href="">Login</a></li> 
+          <li><a href="">Sign up</a></li> 
+        </ul>
+        <div class="dropdown">
+          <button>EN <i class="fa-solid fa-chevron-down"></i></button>
+          <ul>
+            <li>KOR</li>
+            <li>ENG</li>
+            <li>JPA</li>
+          </ul>
+        </div>
+      </nav>
+    </div>
   </div>
   <div class="content container">
     <div class="desc">
@@ -51,6 +54,7 @@
     </div>
   </div>
 </header>
+
 <main>
   <section class="services"></section>
     <div class="container"></div>
