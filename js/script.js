@@ -10,6 +10,12 @@ let partnerListCount = document.querySelectorAll('.partner_list li').length;
 let partnerListLeft = 0;
 let partnerListTotalWidth = partnerListWidth*partnerListCount;
 let animation;
+let bookATrip = document.querySelector('.book_a_trip');
+let bookATripOST = bookATrip.offsetTop-300;
+let progressBar = document.querySelector('.progress_bar');
+let bar = document.querySelector('.progress_bar .bar');
+let onGoingPercent = document.querySelector('.ongoing .percent');
+
 
 partnerList.style.width=partnerListTotalWidth + 'px';
 
@@ -88,4 +94,27 @@ paginationDown.addEventListener('click',()=>{
 paginationUp.addEventListener('click',()=>{
   showTestimonial(curremtIdx - 1)
 });
+
+window.addEventListener('scroll',()=>{
+  let scrollAmt = window.scrollY;
+  if(scrollAmt>=bookATripOST){
+    if(!bookATrip.classList.contains('active')){
+    bookATrip.classList.add('active');
+    onGoingNumAnimation();
+    }
+  }
+});
+
+function onGoingNumAnimation(){
+  let targetNum = Number(bar.getAttribute('data-rate'));
+  let num=0;
+  let animation = setInterval(()=>{
+    num += 1;
+    bar.style.width = num+'%';
+    onGoingPercent.innerHTML = num+'%';
+    if(num===targetNum){
+      clearInterval(animation);
+    } 
+  },50);
+}
 

@@ -404,7 +404,15 @@ header .content .desc h2 em:after{
   border-radius: 26px;
   background: var(--white);
   box-shadow: 0px 100px 80px 0px rgba(0, 0, 0, 0.02), 0px 64.815px 46.852px 0px rgba(0, 0, 0, 0.02), 0px 38.519px 25.481px 0px rgba(0, 0, 0, 0.01), 0px 20px 13px 0px rgba(0, 0, 0, 0.01), 0px 8.148px 6.519px 0px rgba(0, 0, 0, 0.01), 0px 1.852px 3.148px 0px rgba(0, 0, 0, 0.00);
+  transform: translateX(-100px);
+  opacity: 0;
+  transition: 0.35s ease-out;
 }
+.active .pic_of_month .detail{
+  transform: none;
+  opacity: 1;
+}
+
 .pic_of_month .detail img{
   margin-bottom: 20px;
 }
@@ -461,6 +469,13 @@ header .content .desc h2 em:after{
   background: var(--white);
   border-radius: 18px;
   box-shadow: 0px 100px 80px 0px rgba(0, 0, 0, 0.02), 0px 64.815px 46.852px 0px rgba(0, 0, 0, 0.02), 0px 38.519px 25.481px 0px rgba(0, 0, 0, 0.01), 0px 20px 13px 0px rgba(0, 0, 0, 0.01), 0px 8.148px 6.519px 0px rgba(0, 0, 0, 0.01), 0px 1.852px 3.148px 0px rgba(0, 0, 0, 0.00);
+  transform: translateX(100px);
+  opacity: 0;
+  transition: 0.35s ease-out;
+}
+.active .ongoing{
+  transform: none;
+  opacity: 1;
 }
 .ongoing h5{
   font-size: 14px;
@@ -498,11 +513,12 @@ header .content .desc h2 em:after{
 .progress_bar .bar{
   border-radius: 2.5px;
   background: #8A79DF;
-  width: 73px;
+  width: 0;
   height: 5px;
   position: absolute;
   left: 0;
   top: 0;
+  transition: 0.3s;
 }
 .testimonials{
   display: flex;
