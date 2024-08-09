@@ -4,6 +4,31 @@ let paginationUp = document.querySelector('.pagination .up');
 let paginationDown = document.querySelector('.pagination .down');
 let curremtIdx = 0;
 let testimonialCount = testimonialsList.length;
+let partnerList = document.querySelector('.partner_list');
+let partnerListWidth = 234;
+let partnerListCount = document.querySelectorAll('.partner_list li').length;
+let partnerListLeft = 0;
+let partnerListTotalWidth = partnerListWidth*partnerListCount;
+let animation;
+
+partnerList.style.width=partnerListTotalWidth + 'px';
+
+function movePartnerList(){
+  partnerListLeft -= 2;
+  if(partnerListLeft === -(partnerListTotalWidth/2)){
+    partnerListLeft = 0;
+  }
+  partnerList.style.left=partnerListLeft+'px';
+  animation=requestAnimationFrame(movePartnerList);
+}
+requestAnimationFrame(movePartnerList);
+
+partnerList.addEventListener('mouseenter',()=>{
+  cancelAnimationFrame(animation);
+});
+partnerList.addEventListener('mouseleave',()=>{
+  requestAnimationFrame(movePartnerList);
+});
 
 /*
 pagers를 클릭하면 할일
@@ -12,7 +37,6 @@ pagers를 클릭하면 할일
 pagers.forEach((item,idx)=>{
   item.addEventListener('click',(e)=>{
     e.preventDefault();
-
    showTestimonial(idx);
   })
 });
@@ -55,7 +79,8 @@ function showTestimonial(num){
 
 /*
   첫 후기인데, -1 마지막 후기가 보이도록
-  마지막 후기인데,3, 첫후기가 보이도록*/
+  마지막 후기인데,3, 첫후기가 보이도록
+*/
 
 paginationDown.addEventListener('click',()=>{
   showTestimonial(curremtIdx + 1)
@@ -63,3 +88,4 @@ paginationDown.addEventListener('click',()=>{
 paginationUp.addEventListener('click',()=>{
   showTestimonial(curremtIdx - 1)
 });
+
